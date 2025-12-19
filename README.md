@@ -1,13 +1,13 @@
 # Happy Holidays Streamlit App
 
-A festive Streamlit application that generates personalized holiday greetings with animations and interactive features.
+A festive Streamlit application that brings holiday greetings with animations and interactive celebrations.
 
 ## Features
 
-- **Personalized Greetings**: Customize the app with your name via URL parameters
-- **Holiday Animations**: Multiple Lottie animations for a festive experience
-- **Interactive Elements**: Buttons, expanders, and celebration effects
-- **Responsive Layout**: Uses columns and latest Streamlit features for better UX
+- **Holiday Greetings**: Warm holiday messages for everyone
+- **Holiday Animations**: Lottie animations for a festive experience
+- **Interactive Elements**: Buttons and celebration effects
+- **Responsive Layout**: Clean and simple user interface
 
 ## How to Use
 
@@ -17,16 +17,11 @@ A festive Streamlit application that generates personalized holiday greetings wi
    streamlit run streamlit_app.py
    ```
 
-2. **Personalize Your Experience**:
-   - Add `?name=YourName` to the URL
-   - Example: `http://localhost:8501/?name=Alice`
+2. **Explore the App**:
+   - Enjoy the holiday greeting and animation
+   - Trigger twinkling stars and celebration effects
 
-3. **Explore the App**:
-   - View your personalized holiday greeting
-   - Enjoy holiday animations and twinkling stars
-   - Trigger celebration effects with buttons
-
-4. **Interactive Features**:
+3. **Interactive Features**:
    - Click "Send Wishes Back!" for balloons
    - Expand "More Holiday Wishes" for additional messages
    - Start the twinkling stars animation
@@ -38,7 +33,6 @@ A festive Streamlit application that generates personalized holiday greetings wi
 - `st.expander()` for collapsible sections
 - `st.balloons()` and `st.snow()` for celebrations
 - Wide layout with `layout="wide"`
-- Query parameters for personalization
 
 ## Requirements
 

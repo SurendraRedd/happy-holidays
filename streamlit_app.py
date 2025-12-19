@@ -23,12 +23,6 @@ def run_snow_animation():
     rain(emoji="❄️", font_size=20, falling_speed=5, animation_length="infinite")
 
 
-# Function to get the name from query parameters
-def get_person_name():
-    name = st.query_params.get("name", "Friend")
-    return name if isinstance(name, str) else name[0]
-
-
 # Page configuration
 st.set_page_config(page_title="Happy Holidays", page_icon="🎄", layout="wide")
 
@@ -45,28 +39,22 @@ with st.sidebar:
     st.markdown("""
     **Welcome to the Happy Holidays App!**
 
-    This app generates personalized holiday greetings with festive animations.
+    This app brings festive holiday greetings with animations and celebrations.
 
     **Features:**
-    - Personalized messages based on your name
     - Holiday animations and effects
     - Interactive celebration buttons
-
-    **How to personalize:**
-    - Add `?name=YourName` to the URL
-    - Example: `http://localhost:8501/?name=Alice`
 
     **Enjoy the festivities!**
     """)
 
 # Main content
 # Display header with personalized name
-PERSON_NAME = get_person_name()
-st.header(f"Happy Holidays, {PERSON_NAME}! 🎄", anchor=False)
+st.header("Happy Holidays, Everyone! 🎄", anchor=False)
 
 # Personalized holiday message
 st.markdown(
-    f"Dear {PERSON_NAME}, wishing you a wonderful holiday season filled with joy and peace. 🌟"
+    "Wishing you a wonderful holiday season filled with joy and peace. 🌟"
 )
 
 # Add some interactive elements
@@ -83,33 +71,9 @@ with st.expander("More Holiday Wishes"):
 
 st.header("Holiday Animations")
 
-# Layout with columns for multiple animations
-col1, col2 = st.columns(2)
-
-with col1:
-    st.subheader("Main Animation")
-    lottie_animation = load_lottie_animation(LOTTIE_ANIMATION)
-    st_lottie(lottie_animation, key="lottie-main", height=300)
-
-with col2:
-    st.subheader("Secondary Animation")
-    # For now, reuse the same animation; in a real app, you'd have different ones
-    lottie_animation2 = load_lottie_animation(LOTTIE_ANIMATION)
-    st_lottie(lottie_animation2, key="lottie-secondary", height=300)
-
-# Add more animations in rows
-st.subheader("More Festive Elements")
-col3, col4, col5 = st.columns(3)
-with col3:
-    st.markdown("🎄 **Christmas Tree**")
-    # Placeholder for tree animation
-    st.markdown("🌟 Twinkling lights animation would go here")
-with col4:
-    st.markdown("🎁 **Gift Box**")
-    st.markdown("🎀 Wrapping animation would go here")
-with col5:
-    st.markdown("⭐ **Star**")
-    st.markdown("✨ Shining star animation would go here")
+# Main holiday animation
+lottie_animation = load_lottie_animation(LOTTIE_ANIMATION)
+st_lottie(lottie_animation, key="lottie-main", height=300)
 
 # Add a simple animated twinkling stars
 st.subheader("Twinkling Stars")
