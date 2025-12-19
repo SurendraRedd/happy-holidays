@@ -7,7 +7,6 @@ A festive Streamlit application that generates personalized holiday greetings wi
 - **Personalized Greetings**: Customize the app with your name via URL parameters
 - **Holiday Animations**: Multiple Lottie animations for a festive experience
 - **Interactive Elements**: Buttons, expanders, and celebration effects
-- **Tabbed Interface**: Organized sections for greeting, animations, and celebration
 - **Responsive Layout**: Uses columns and latest Streamlit features for better UX
 
 ## How to Use
@@ -22,25 +21,24 @@ A festive Streamlit application that generates personalized holiday greetings wi
    - Add `?name=YourName` to the URL
    - Example: `http://localhost:8501/?name=Alice`
 
-3. **Navigate the App**:
-   - **Greeting Tab**: View your personalized holiday message
-   - **Animations Tab**: Enjoy multiple holiday animations
-   - **Celebrate Tab**: Trigger celebration effects and leave messages
+3. **Explore the App**:
+   - View your personalized holiday greeting
+   - Enjoy holiday animations and twinkling stars
+   - Trigger celebration effects with buttons
 
 4. **Interactive Features**:
    - Click "Send Wishes Back!" for balloons
    - Expand "More Holiday Wishes" for additional messages
-   - Use the chat input to leave a holiday message
+   - Start the twinkling stars animation
    - Click "Celebrate Now!" for full celebration mode
 
 ## Latest Streamlit Features Used
 
-- `st.tabs()` for organized content
 - `st.columns()` for responsive layout
 - `st.expander()` for collapsible sections
-- `st.chat_input()` for user interaction
 - `st.balloons()` and `st.snow()` for celebrations
 - Wide layout with `layout="wide"`
+- Query parameters for personalization
 
 ## Requirements
 
@@ -62,6 +60,6 @@ streamlit run streamlit_app.py
 
 - Add more Lottie animations in the `assets/` folder
 - Modify CSS in `style/style.css` for custom styling
-- Extend tabs or add new features as needed
+- Add new interactive features as needed
 
 Enjoy the holidays! 🎄✨
