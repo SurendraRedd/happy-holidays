@@ -57,18 +57,6 @@ st.markdown(
     "Wishing you a wonderful holiday season filled with joy and peace. 🌟"
 )
 
-# Add some interactive elements
-if st.button("Send Wishes Back!"):
-    st.balloons()
-    st.success("Wishes sent! 🎉")
-
-with st.expander("More Holiday Wishes"):
-    st.markdown("""
-    - May your days be merry and bright!
-    - Here's to new beginnings and cherished memories.
-    - Warmest wishes for a joyful holiday season.
-    """)
-
 st.header("Holiday Animations")
 
 # Main holiday animation

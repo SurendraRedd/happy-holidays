@@ -22,8 +22,6 @@ A festive Streamlit application that brings holiday greetings with animations an
    - Trigger twinkling stars and celebration effects
 
 3. **Interactive Features**:
-   - Click "Send Wishes Back!" for balloons
-   - Expand "More Holiday Wishes" for additional messages
    - Start the twinkling stars animation
    - Click "Celebrate Now!" for full celebration mode
 
