@@ -33,21 +33,6 @@ run_snow_animation()
 with open(CSS_FILE) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Sidebar for usage instructions
-with st.sidebar:
-    st.header("How to Use This App")
-    st.markdown("""
-    **Welcome to the Happy Holidays App!**
-
-    This app brings festive holiday greetings with animations and celebrations.
-
-    **Features:**
-    - Holiday animations and effects
-    - Interactive celebration buttons
-
-    **Enjoy the festivities!**
-    """)
-
 # Main content
 # Display header with personalized name
 st.header("Happy Holidays, Everyone! 🎄", anchor=False)

@@ -7,6 +7,7 @@ A festive Streamlit application that brings holiday greetings with animations an
 - **Holiday Greetings**: Warm holiday messages for everyone
 - **Holiday Animations**: Lottie animations for a festive experience
 - **Interactive Elements**: Buttons and celebration effects
+- **Festive Background**: Beautiful gradient background theme
 - **Responsive Layout**: Clean and simple user interface
 
 ## How to Use
