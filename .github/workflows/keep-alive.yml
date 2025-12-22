@@ -1,14 +1,24 @@
-name: Keep App Alive
+name: Keep Streamlit Alive
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Every 15 minutes
-  workflow_dispatch:  # Manual trigger option
+    - cron: '*/10 * * * *'  # Every 10 minutes
+  workflow_dispatch:
 
 jobs:
-  ping:
+  wake-up:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Streamlit App
+      - name: Wake up Streamlit app
         run: |
-          curl -s -o /dev/null -w "%{http_code}" https://happy-holidays-everyone.streamlit.app
-          echo " App pinged at $(date)"
+          # First request to wake the app
+          curl -s -o /dev/null -w "Wake: %{http_code}\n" \
+          "https://happy-holidays-everyone.streamlit.app?_st=$(date +%s)"
+          
+          # Wait 5 seconds
+          sleep 5
+          
+          # Second request to ensure it's loaded
+          curl -s -o /dev/null -w "Confirm: %{http_code}\n" \
+          "https://happy-holidays-everyone.streamlit.app"
+          
+          echo "App pinged at $(date)"
