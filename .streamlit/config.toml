@@ -2,6 +2,11 @@
 # Primary accent color for interactive elements.
 primaryColor = "#d33682"
 
+[server]
+headless = true
+enableCORS = false
+keep_alive_interval = 1  # Minutes between keep-alive pings
+
 # Background color for the main content area.
 backgroundColor = "#002b36"
 
