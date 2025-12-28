@@ -2,7 +2,7 @@ name: Keep Streamlit App Awake with Selenium
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes (adjust; more frequent = safer)
+    - cron: '*/30 * * * *'  # Every 30 minutes – adjust if needed (more frequent is safer)
   workflow_dispatch:
 
 jobs:
@@ -41,17 +41,18 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 try:
     driver.get("https://happy-holidays-everyone.streamlit.app")
-    time.sleep(10)  # Wait for page load
+    time.sleep(10)  # Wait for page to load
 
-    # If sleep page detected, click wake-up button
+    # If sleep page is detected, click the wake-up button
     try:
         wake_button = driver.find_element(By.XPATH, "//button[contains(text(), 'Yes, get this app back up')]")
         wake_button.click()
         print("Sleep page detected – clicked wake-up button")
-        time.sleep(30)  # Wait for app to warm up
+        time.sleep(30)  # Wait for app to fully warm up
     except:
-        print("App already awake – no wake-up needed")
+        print("App already awake – no action needed")
 
+    print("Page title:", driver.title)
 finally:
     driver.quit()
 EOF
